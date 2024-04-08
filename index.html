@@ -8,12 +8,12 @@
 </head>
 
 <body>
-    <h2>Upload Video</h2>
+    <h1>Upload Video</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <label for="video">Select a video file:</label><br>
         <input type="file" id="video" name="video" accept="video/*"><br><br>
-        <label for="languages">Select a language:</label>
-        <select id="languages" name="languages">
+        <label for="languagei">Select a vedio language:</label>
+        <select id="languagei" name="languagei">
             <option value="hi">Hindi</option>
             <option value="es">Spanish</option>
             <option value="de">German</option>
@@ -21,7 +21,16 @@
             <option value="ko">Korean</option>
             <option value="it">Italian</option>
             <option value="ja">Japanese</option>
-            <!-- Add more language options here -->
+        </select>
+        <label for="languageo">Select the desired language:</label>
+        <select id="languageo" name="languageo">
+            <option value="hi">Hindi</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="ar">Arabic</option>
+            <option value="ko">Korean</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
         </select>
         <button type="submit">Upload</button>
     </form>
