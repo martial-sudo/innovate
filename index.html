@@ -14,13 +14,21 @@
     <title>Upload Video</title>
 </head>
 
-<body>
-    <h1>Unity Translate</h1>
+<body background="bg.png">
+    <div>
+    <h1 align="center">Unity Translate</h1>
+    <hr>
+    </div>
+    
+    <br><br>
+
+    <div id="form">
       <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="video">Select a video file:</label><br>
-        <input type="file" id="video" name="video" accept="video/*"><br><br>
-        <label for="languages">Select a language:</label>
-        <select id="languages" name="languages">
+         <label for="video">Select a video file:</label><br><br>
+                <input class="button-50" type="file" id="video" name="video" accept="video/*">
+        <br><br><br>
+        <label for="languages">Select a language:</label><br><br><br>
+        <select class="button-67" id="languages" name="languages">
             <option value="en">English</option>
             <option value="hi">Hindi</option>
             <option value="es">Spanish</option>
@@ -29,8 +37,9 @@
             <option value="ko">Korean</option>
             <option value="it">Italian</option>
             <option value="ja">Japanese</option>
-        </select>
-        <button type="submit">Upload</button>
+        </select><br><br><br>
+        <button class="button-50" type="submit">Upload</button>
+        </div>
     </form>
 
 </body>
