@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translated Video Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Translated Video Player</h1>
+    <button onclick="perform()">GET</button>
+
+    <script>
+        // Make a GET request to fetch translated video
+        function perform() {
+            fetch('/translated-video')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const videoElement = document.getElementById('translatedVideo');
+                    videoElement.src = url;
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+            // Create the video element
+            const videoElement = document.createElement('video');
+
+            // Set attributes for the video element
+            videoElement.id = 'translatedVideo';
+            videoElement.setAttribute('controls', '');
+
+            // Set placeholder content
+            videoElement.textContent = 'Your browser does not support the video tag.';
+
+            // Append the video element to the body or any desired parent element
+            document.body.appendChild(videoElement);
+        }
+    </script>
+</body>
+
+</html>
